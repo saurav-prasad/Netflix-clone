@@ -1,0 +1,40 @@
+.row {
+    padding: 5px 0px;
+padding-left: 20px;
+}
+
+.rowTitle {
+    color: white;
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.rowPosterConatainer {
+    display: flex;
+    flex-direction: row;
+    overflow-y: hidden;
+    padding: 20px 8px;
+    overflow-x: scroll;
+}
+
+.rowPosterConatainer::-webkit-scrollbar {
+    display: none;
+}
+
+.rowImage {
+    max-height: 120px;
+    width: 100%;
+    object-fit: contain;
+    margin-right: 13px;
+    transition: transform 200ms ease-in;
+}
+
+.rowImage:hover {
+    transform: scale(1.08);
+}
+
+.rowLargeImage {
+    max-height: 200px;
+    margin-right: 10px;
+}
