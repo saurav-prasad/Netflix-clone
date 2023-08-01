@@ -1,0 +1,26 @@
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    padding: 5px 20px;
+    flex-direction: row;
+    justify-content: space-between;
+    transition: all 500ms ease-in;
+}
+
+.navColor {
+    background-color: #141414;
+}
+
+.netflixLogo {
+    width: 8em;
+    object-fit: contain;
+}
+
+.userLogo {
+    object-fit: contain;
+    width: 2em;
+    border-radius: 9px;
+}

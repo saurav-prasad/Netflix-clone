@@ -19,7 +19,7 @@ function Banner() {
     const trim = (str, n) => {
         return str?.length > n ? str.slice(0, str.charAt(n) === " " ? n - 1 : n) + "..." : str
     }
-
+console.log(Movies);
     return (
          <header style={{ backgroundImage: `url(${imageUrl}${Movies?.backdrop_path})` }} className='banner flexCenter'>
             <div className='bannerContainer flexCenter'>
@@ -31,7 +31,7 @@ function Banner() {
                         <span className='bannerVote'>{Movies.vote_average} points</span>
                         <span className='bannerYear'>{Movies?.first_air_date?.slice(0, 4)}</span>
                     </div>
-                    <p className='bannerDesc'>{trim(Movies.overview, 150)}</p>
+                    <p className='bannerDesc'>{trim(Movies.overview, 200)}</p>
                     {/* button */}
                     <button className='bannerButton flexCenter cursorPointer'>
                         ► Watch
