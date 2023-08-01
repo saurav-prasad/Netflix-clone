@@ -1,0 +1,75 @@
+.banner {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80vh;
+    align-items: start;
+    position: relative;
+}
+
+.bannerContainer {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #111 31%, #00000061 67%, #16191b00 109%,  transparent 95%);
+    align-items: start;
+    padding: 0 30px;
+
+}
+
+.bannerTitle {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 0.3em;
+}
+
+.bannerDetail {
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 0.8em;
+}
+
+.bannerVote {
+    color: #46d369;
+}
+
+.bannerYear {
+    margin: 0 10px;
+}
+
+.bannerDesc {
+    max-width: 800px;
+    color: #999;
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin-bottom: 0.8em;
+    text-align: left;
+}
+
+.bannerButton {
+    color: #000;
+    flex-direction: row;
+    font-size: 1.3rem;
+    outline: none;
+    border: none;
+    border-radius: 7px;
+    font-weight: 500;
+    padding: 9px 25px;
+    transition: background-color 190ms ease;
+    margin-bottom: 0.7em;
+}
+
+.bannerButton:hover {
+    background-color: #b0b0b0;
+}
+
+.bannerGenre {}
+
+.bannerFooterGradient {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 10rem;
+    width: 100%;
+    background: linear-gradient(180deg,transparent, #19171696 , rgb(19 19 19 / 94%) , #111 );
+}
