@@ -19,9 +19,9 @@ function Banner() {
     const trim = (str, n) => {
         return str?.length > n ? str.slice(0, str.charAt(n) === " " ? n - 1 : n) + "..." : str
     }
-console.log(Movies);
+
     return (
-         <header style={{ backgroundImage: `url(${imageUrl}${Movies?.backdrop_path})` }} className='banner flexCenter'>
+        <header style={{ backgroundImage: `url(${imageUrl}${Movies?.backdrop_path})` }} className='banner flexCenter'>
             <div className='bannerContainer flexCenter'>
                 <div>
                     <h1 className='bannerTitle'>
