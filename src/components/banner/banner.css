@@ -12,7 +12,7 @@
     height: 100%;
     background: linear-gradient(90deg, #111 31%, #00000061 67%, #16191b00 109%, transparent 95%);
     align-items: start;
-    padding: 0 30px;
+    padding: 0 20px;
 
 }
 
@@ -40,7 +40,7 @@
     max-width: 750px;
     width: 80vw;
     color: #999;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 1.3rem;
     margin-bottom: 0.8em;
     text-align: left;

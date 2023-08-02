@@ -6,6 +6,7 @@ import Nav from './components/nav/Nav';
 import Row from './components/rows/Row';
 import requests from './requests';
 import Alrt from './components/alrt/Alrt';
+import Footer from './components/footer/Footer';
 
 function App() {
   const [alert, setAlert] = useState(null);
@@ -28,6 +29,7 @@ function App() {
       <Row showAlert={showAlert} title='Horror' fetchUrl={requests.fetchHorrorMovies} />
       <Row showAlert={showAlert} title='Romance' fetchUrl={requests.fetchRomanceMovies} />
       <Row showAlert={showAlert} title='Documentaries' fetchUrl={requests.fetchDocumentaries} />
+      <Footer />
     </div>
   );
 }

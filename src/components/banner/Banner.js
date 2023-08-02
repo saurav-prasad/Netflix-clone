@@ -31,7 +31,7 @@ function Banner() {
                         <span className='bannerVote'>{Movies.vote_average} points</span>
                         <span className='bannerYear'>{Movies?.first_air_date?.slice(0, 4)}</span>
                     </div>
-                    <p className='bannerDesc'>{trim(Movies.overview, 200)}</p>
+                    <p className='bannerDesc'>{trim(Movies.overview, 180)}</p>
                     {/* button */}
                     <button className='bannerButton flexCenter cursorPointer'>
                         ► Watch
