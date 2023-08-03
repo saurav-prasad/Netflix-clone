@@ -9,6 +9,6 @@
 }
 
 .alertContent {
-    width: 50%;
+    width: fit-content;
     margin: auto;
 }

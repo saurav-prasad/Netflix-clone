@@ -20,7 +20,7 @@ function App() {
     <div className='App'>
       <Alrt showAlert={alert} />
       <Nav />
-      <Banner />
+      <Banner showAlert={showAlert}/>
       <Row showAlert={showAlert} isLargeRow={true} title='Netflix Originals' fetchUrl={requests.fetchNetflixOriginals} />
       <Row showAlert={showAlert} title='Trending Now' fetchUrl={requests.fetchNetflixOriginals} />
       <Row showAlert={showAlert} title='Top Rated' fetchUrl={requests.fetchTopRated} />
