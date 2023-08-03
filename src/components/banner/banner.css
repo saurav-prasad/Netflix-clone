@@ -45,7 +45,11 @@ z-index: 10;
     margin-bottom: 0.8em;
     text-align: left;
 }
-
+@media (max-width:500px) {
+    .bannerDesc{
+        font-size: 1.1rem;
+    }
+}
 .bannerButton {
     color: #000;
     flex-direction: row;

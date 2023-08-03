@@ -25,8 +25,8 @@
 .rowImage {
     max-height: 120px;
     width: 100%;
-    object-fit: contain;
     margin-right: 13px;
+    object-fit: contain;
     transition: transform 150ms ease-in;
 }
 
@@ -37,4 +37,9 @@
 .rowLargeImage {
     max-height: 200px;
     margin-right: 10px;
+}
+
+.clickedImage{
+    border: 2.5px solid transparent;
+    border-image: linear-gradient(to right, #dc191f, #009eff) 1;
 }

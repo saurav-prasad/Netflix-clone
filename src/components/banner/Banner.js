@@ -4,6 +4,7 @@ import axios from '../../axios'
 import requests from '../../requests'
 import movieTrailer from 'movie-trailer'
 import YouTube from 'react-youtube';
+import { LinearProgress } from '@mui/material'
 
 const imageUrl = 'https://image.tmdb.org/t/p/original'
 
@@ -11,6 +12,7 @@ function Banner({ showAlert }) {
 
     const [trailer, settrailer] = useState()
     const [counter, setcounter] = useState()
+    const [progress, setprogress] = useState(false)
     const opts = {
         height: '390',
         width: '100%',
@@ -24,13 +26,17 @@ function Banner({ showAlert }) {
             settrailer()
         }
         else {
+            setprogress(true)
             movieTrailer(data?.original_name || data?.name || data?.title)
                 .then((value) => {
-                    console.log(value);
                     const url = new URLSearchParams(new URL(value).search)
                     settrailer(url.get('v'))
+                    setprogress(false)
                 })
-                .catch((e) => showAlert(true))
+                .catch((e) => {
+                    setprogress(false)
+                    showAlert(true)
+                })
             setcounter(data.id)
         }
     }
@@ -70,12 +76,17 @@ function Banner({ showAlert }) {
                 </div>
                 <div className='bannerFooterGradient'></div>
             </header>
+
+            {
+                progress &&
+                <LinearProgress style={{ marginBottom: '7px', backgroundColor: "#dc191f", color: '#dc191f' }} color='inherit'/>
+            }
             {
                 trailer &&
                 <YouTube
                     videoId={trailer}
-                    opts={opts}
-                />
+                    opts={opts} />
+
             }
         </>
     )
