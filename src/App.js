@@ -9,6 +9,7 @@ import Alrt from './components/alrt/Alrt';
 import Footer from './components/footer/Footer';
 
 function App() {
+  console.log(process.env);
   const [alert, setAlert] = useState(null);
   const showAlert = (data) => {
     setAlert(data)

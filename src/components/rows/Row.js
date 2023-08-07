@@ -13,7 +13,7 @@ function Row({ title, fetchUrl, isLargeRow, showAlert }) {
     const [counter, setcounter] = useState()
     const [progress, setprogress] = useState(false)
     const opts = {
-        height: '390',
+        height: '400',
         width: '100%',
         playerVars: {
             // https://developers.google.com/youtube/player_parameters
@@ -62,7 +62,9 @@ function Row({ title, fetchUrl, isLargeRow, showAlert }) {
                         <img
                             key={data.id}
                             className={`rowImage cursorPointer ${(trailer && (data?.id === counter)) && 'clickedImage'} ${isLargeRow && "rowLargeImage"}`}
-                            src={`${imageUrl}${isLargeRow ? data.poster_path : data.backdrop_path}`}
+
+                            src={`${imageUrl}${isLargeRow ? data.poster_path : data.backdrop_path}` ?? 'https://thumbs.gfycat.com/BackIllinformedAsianelephant-size_restricted.gif'}
+
                             onClick={() => getMovie(data)}
                             alt={data.name}
                         />
@@ -71,12 +73,12 @@ function Row({ title, fetchUrl, isLargeRow, showAlert }) {
             </div>
             {
                 progress &&
-                <LinearProgress style={{ marginBottom: '7px', backgroundColor: "#dc191f", color: '#dc191f' }} color='inherit'/>
+                <LinearProgress style={{ marginBottom: '7px', backgroundColor: "#dc191f", color: '#dc191f' }} color='inherit' />
             }
             {
                 trailer &&
                 <YouTube
-                    videoId={trailer}
+                    videoId={trailer ?? 'https://thumbs.gfycat.com/BackIllinformedAsianelephant-size_restricted.gif'}
                     opts={opts}
                 />
             }
