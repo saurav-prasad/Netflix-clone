@@ -17,5 +17,5 @@
 .footerImage {
     object-fit: contain;
     width: 1.5em;
-    margin-left: 4%;
+    margin: 0 5px;
 }
