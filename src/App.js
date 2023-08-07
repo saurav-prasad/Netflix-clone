@@ -14,7 +14,7 @@ function App() {
     setAlert(data)
     setTimeout(() => {
       setAlert(null);
-    }, 900)
+    }, 1000)
   }
   return (
     <div className='App'>
