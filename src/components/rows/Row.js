@@ -29,7 +29,9 @@ function Row({ title, fetchUrl, isLargeRow, showAlert }) {
             setprogress(true)
             movieTrailer(data?.original_name || data?.name || data?.title)
                 .then((value) => {
+                    console.log(value);
                     const url = new URLSearchParams(new URL(value).search)
+                    console.log(url);
                     settrailer(url.get('v'))
                     setprogress(false)
                 })
@@ -47,6 +49,7 @@ function Row({ title, fetchUrl, isLargeRow, showAlert }) {
     useEffect(() => {
         const fetchData = async () => {
             const request = await axios.get(fetchUrl)
+            console.log(request.data.results);
             setMovies(request.data.results)
         }
         fetchData()
